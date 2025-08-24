@@ -1,3 +1,3 @@
-function add7(num) {
-    return num + 7;
+function add7(string) {
+    return string.charAt((string.length)-1);
 }

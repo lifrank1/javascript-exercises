@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getComputerChoice() {
+            let choice = 4
+            range = Math.random() * 3
+            if (range >= 2) {
+                choice = 2
+            }
+            else if (range >= 1) {
+                choice = 1
+            }
+            else if (range >= 0) {
+                choice = 0
+            }
+            return choice
+        }
+
+        function getHumanChoice() {
+            choice = prompt("Enter a choice (0 for rock, 1 for paper, 2 for scissors)")
+            return choice
+        }
+        
+        humanScore = 0
+        computerScore = 0
+        function playRound(humanChoice, computerChoice){ 
+            humanChoice = getHumanChoice()
+            computerChoice = getComputerChoice()
+            if (humanChoice == 0) {
+                if (computerChoice == 0) {
+                    console.log("Tie")
+                }
+                else if (computerChoice == 1) {
+                    console.log("You Lose")
+                    computerScore += 1
+                }
+                else if (computerChoice == 2) {
+                    console.log("You Win")
+                    humanScore += 1
+                }
+            }
+            else if (humanChoice == 1) {
+                if (computerChoice == 1) {
+                    console.log("Tie")
+                }
+                else if (computerChoice == 2) {
+                    console.log("You Lose")
+                    computerScore += 1
+                }
+                else if (computerChoice == 0) {
+                    console.log("You Win")
+                    humanScore += 1
+                }
+            }
+            else if (humanChoice == 2) {
+                if (computerChoice == 2) {
+                    console.log("Tie")
+                }
+                else if (computerChoice == 0) {
+                    console.log("You Lose")
+                    computerScore += 1
+                }
+                else if (computerChoice == 1) {
+                    console.log("You Win")
+                    humanScore += 1
+                }
+            }
+
+            console.log(`The computer chose: ${computerChoice}`)
+
+            console.log(`Computer Score: ${computerScore}`)
+            console.log(`Human Score: ${humanScore}`)
+        }
+
+        function playGame() {
+            playRound()
+            playRound()
+            playRound()
+            playRound()
+            playRound()
+        }
+
+        playGame()
+    </script>
+    
+</body>
+</html>
