@@ -19,8 +19,18 @@ function sumOfTripledEvens(array) {
 
 let container = document.querySelector("#identity")
 
-let child = document.createElement("p")
-child.style.color = "red"
-child.textContent = "Hey I'm red"
+let child = document.createElement("div");
+child.style.borderStyle = "solid"; 
+child.style.background = "pink";
+child.textContent = "im div"
+
+let hchild = document.createElement("h1")
+hchild.textContent = "im in a div"
+
+let pchild = document.createElement("p")
+pchild.textContent = "me too"
+
+child.appendChild(hchild)
+child.appendChild(pchild)
 
 container.appendChild(child)
