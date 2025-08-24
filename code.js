@@ -17,20 +17,37 @@ function sumOfTripledEvens(array) {
     return sum
 }
 
-let container = document.querySelector("#identity")
+function mapToNames() {
+    let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
 
-let child = document.createElement("div");
-child.style.borderStyle = "solid"; 
-child.style.background = "pink";
-child.textContent = "im div"
+let users = [ john, pete, mary ];
 
-let hchild = document.createElement("h1")
-hchild.textContent = "im in a div"
+let names = []
+for (const user of users) {
+    names.push(user.name)
+}
 
-let pchild = document.createElement("p")
-pchild.textContent = "me too"
+alert( names ); // John, Pete, Mary
+}
 
-child.appendChild(hchild)
-child.appendChild(pchild)
+mapToNames()
 
-container.appendChild(child)
+// let container = document.querySelector("#identity")
+
+// let child = document.createElement("div");
+// child.style.borderStyle = "solid"; 
+// child.style.background = "pink";
+// child.textContent = "im div"
+
+// let hchild = document.createElement("h1")
+// hchild.textContent = "im in a div"
+
+// let pchild = document.createElement("p")
+// pchild.textContent = "me too"
+
+// child.appendChild(hchild)
+// child.appendChild(pchild)
+
+// container.appendChild(child)
