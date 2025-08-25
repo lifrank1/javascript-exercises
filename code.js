@@ -32,7 +32,6 @@ for (const user of users) {
 alert( names ); // John, Pete, Mary
 }
 
-mapToNames()
 
 // let container = document.querySelector("#identity")
 
@@ -51,3 +50,15 @@ mapToNames()
 // child.appendChild(pchild)
 
 // container.appendChild(child)
+
+// odin javascript after foundations
+
+// constructor functions have capital first letters
+function Book(title, author, pages) {
+    this.title = title
+    this.author = author
+    this.pages = pages
+    this.read = false
+
+    this.info = () => `${this.title} by ${this.author}, ${this.pages} pages`
+}
