@@ -1,17 +1,10 @@
-// for express
-
-const express = require("express");
+const http = require('http');
+const fs = require('fs');
+const express = require('express');
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello, world!"));
+app.get("/", (req, res) => res.sendFile('index.html', { root: __dirname }));
+app.get("/contact", (req, res) => res.sendFile('contact.html', { root: __dirname }));
 
 const PORT = 3000;
-app.listen(PORT, (error) => {
-  // This is important!
-  // Without this, any startup errors will silently fail
-  // instead of giving you a helpful error message.
-  if (error) {
-    throw error;
-  }
-  console.log(`My first Express app - listening on port ${PORT}!`);
-});
+app.listen(PORT, ()=>console.log("STARTED"))
